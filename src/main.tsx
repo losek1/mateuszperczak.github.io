@@ -1,4 +1,4 @@
-import AppProvider from "@components/appProvider/AppProvider";
+import { AppProvider } from "@components/index";
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 

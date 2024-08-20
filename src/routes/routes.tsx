@@ -1,12 +1,12 @@
-import App from "@components/app/App";
+import { App } from "@components/index";
 import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
-const Home = lazy(() => import("../pages/Home/Home"));
-const Updates = lazy(() => import("../pages/Updates/Updates"));
-const Projects = lazy(() => import("../pages/Projects/Projects"));
-const AboutMe = lazy(() => import("../pages/AboutMe/AboutMe"));
-const PageNotFound = lazy(() => import("../pages/PageNotFound/PageNotFound"));
+const Home = lazy(() => import("../pages/home/Home"));
+const Updates = lazy(() => import("../pages/updates/Updates"));
+const Projects = lazy(() => import("../pages/projects/Projects"));
+const AboutMe = lazy(() => import("../pages/aboutMe/AboutMe"));
+const PageNotFound = lazy(() => import("../pages/pageNotFound/PageNotFound"));
 
 // const Blog = lazy(() => {
 //   return new Promise((resolve) => {

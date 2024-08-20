@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const StyledLoader = styled.div`
+export const StyledLoader = styled.div`
   display: flex;
   flex: 1 0 100%;
   align-items: stretch;
@@ -31,5 +31,3 @@ const StyledLoader = styled.div`
     }
   }
 `;
-
-StyledLoader;
