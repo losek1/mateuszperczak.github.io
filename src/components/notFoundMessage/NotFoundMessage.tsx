@@ -18,6 +18,7 @@ const NotFoundMessage = (): JSX.Element => {
   const navigate = useNavigate();
 
   const goHome = (): void => navigate("/", { replace: true });
+  const goBack = (): void => navigate(-1);
 
   return (
     <StyledNotFoundMessage
@@ -33,9 +34,14 @@ const NotFoundMessage = (): JSX.Element => {
         It looks like the page you are looking for does not exist. Make sure the page url
         is correct. How about going back to the home page?
       </StyledDescription>
-      <StyledButton variants={textVariants} onClick={goHome} type="button">
-        <span>Home page</span>
-      </StyledButton>
+      <div className="button-wrapper">
+        <StyledButton variants={textVariants} onClick={goBack} type="button">
+          <span>Go Back</span>
+        </StyledButton>
+        <StyledButton variants={textVariants} onClick={goHome} type="button">
+          <span>Home page</span>
+        </StyledButton>
+      </div>
     </StyledNotFoundMessage>
   );
 };

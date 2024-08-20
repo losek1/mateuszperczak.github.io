@@ -9,9 +9,10 @@ const StyledNavHamburger = styled(m.button)`
   border-radius: 5px;
   transition: background-color 200ms;
   cursor: pointer;
-  color: ${({ theme: { navItem } }): string => navItem};
+  color: ${({ theme: { textColorSecondary } }): string => textColorSecondary};
   &:hover {
-    background-color: ${({ theme: { border } }): string => border};
+    background-color: ${({ theme: { strokeColorPrimary } }): string =>
+      strokeColorPrimary};
   }
   .hamburger-icon-wrapper {
     display: grid;
@@ -19,7 +20,7 @@ const StyledNavHamburger = styled(m.button)`
     pointer-events: none;
   }
   &:focus-visible {
-    outline: 1px solid ${({ theme: { color } }): string => color};
+    outline: 1px solid ${({ theme: { textColorPrimary } }): string => textColorPrimary};
   }
 `;
 

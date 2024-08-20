@@ -10,12 +10,14 @@ const StyledLoader = styled.div`
     place-items: center;
     flex: 1;
     max-width: 1000px;
-    border-left: 2px solid ${({ theme: { border } }): string => border};
-    border-right: 2px solid ${({ theme: { border } }): string => border};
+    border-left: 2px solid
+      ${({ theme: { strokeColorPrimary } }): string => strokeColorPrimary};
+    border-right: 2px solid
+      ${({ theme: { strokeColorPrimary } }): string => strokeColorPrimary};
     padding-bottom: 64px;
   }
   .loader {
-    color: ${({ theme: { spinner } }): string => spinner};
+    color: ${({ theme: { textColorSecondary } }): string => textColorSecondary};
     line-height: 0;
     font-size: 3rem;
     animation: spin 500ms linear infinite forwards;

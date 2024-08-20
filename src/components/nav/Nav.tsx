@@ -1,4 +1,4 @@
-import { useMobile } from "@hooks/index";
+import useMobile from "@hooks/useMobile";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 

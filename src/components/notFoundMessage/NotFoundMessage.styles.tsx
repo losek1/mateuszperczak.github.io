@@ -7,11 +7,15 @@ const StyledNotFoundMessage = styled(m.div)`
   align-items: center;
   max-width: clamp(300px, 80vw, 400px);
   gap: 10px;
+  .button-wrapper {
+    display: flex;
+    gap: 10px;
+  }
 `;
 
 export const StyledExclamation = styled(m.div)`
   font-size: 4rem;
-  color: ${({ theme: { yellow } }): string => yellow};
+  color: ${({ theme: { yellowColorPrimary } }): string => yellowColorPrimary};
   line-height: 0;
 `;
 
@@ -23,7 +27,7 @@ export const StyledLabel = styled(m.p)`
 export const StyledDescription = styled(m.p)`
   font-size: 0.8rem;
   text-align: center;
-  color: ${({ theme: { link } }): string => link};
+  color: ${({ theme: { textColorSecondary } }): string => textColorSecondary};
 `;
 
 export const StyledButton = styled(m.button)`
@@ -36,12 +40,12 @@ export const StyledButton = styled(m.button)`
   height: 36px;
   padding: 0 10px;
   font-weight: bold;
-  color: ${({ theme: { link } }): string => link};
-  border: 1px solid ${({ theme: { border } }): string => border};
+  color: ${({ theme: { textColorSecondary } }): string => textColorSecondary};
+  border: 1px solid ${({ theme: { strokeColorPrimary } }): string => strokeColorPrimary};
   border-radius: 5px;
-  background-color: ${({ theme: { border } }): string => border};
+  background-color: ${({ theme: { strokeColorPrimary } }): string => strokeColorPrimary};
   &:focus-visible {
-    outline: 1px solid ${({ theme: { color } }): string => color};
+    outline: 1px solid ${({ theme: { textColorPrimary } }): string => textColorPrimary};
   }
 `;
 

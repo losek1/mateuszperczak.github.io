@@ -5,18 +5,21 @@ const StyledFooter = styled.footer`
   align-items: center;
   justify-content: center;
   padding: 20px 0px;
-  border-top: 2px solid ${({ theme: { border } }): string => border};
-  box-shadow: 0 0 5px ${({ theme: { shadow } }): string => shadow};
-  background: ${({ theme: { footerTop, footerBottom } }): string =>
-    `linear-gradient(${footerTop}, ${footerBottom})`};
+  border-top: 2px solid
+    ${({ theme: { strokeColorPrimary } }): string => strokeColorPrimary};
+  box-shadow: 0 0 5px ${({ theme: { shadowColorPrimary } }): string => shadowColorPrimary};
+  background: ${({ theme: { fillColorPrimary, fillColorSecondary } }): string =>
+    `linear-gradient(${fillColorPrimary}, ${fillColorSecondary})`};
 
   .footer-wrapper {
     display: flex;
     flex-direction: column;
     flex: 0 1 1000px;
     padding: 0px 20px;
-    border-left: 2px solid ${({ theme: { border } }): string => border};
-    border-right: 2px solid ${({ theme: { border } }): string => border};
+    border-left: 2px solid
+      ${({ theme: { strokeColorPrimary } }): string => strokeColorPrimary};
+    border-right: 2px solid
+      ${({ theme: { strokeColorPrimary } }): string => strokeColorPrimary};
     @media (max-width: 350px) {
       align-items: center;
     }
@@ -25,7 +28,7 @@ const StyledFooter = styled.footer`
   .title-link {
     font-size: 1.2rem;
     font-weight: bold;
-    color: ${({ theme: { color } }): string => color};
+    color: ${({ theme: { textColorPrimary } }): string => textColorPrimary};
     text-decoration: none;
   }
 

@@ -1,9 +1,9 @@
 import eslintPlugin from "@nabla/vite-plugin-eslint";
+import legacy from "@vitejs/plugin-legacy";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 import { defineConfig } from "vite";
 import svgr from "vite-plugin-svgr";
-
 // https://vitejs.dev/config/
 export default defineConfig({
   base: "",
@@ -24,6 +24,8 @@ export default defineConfig({
       jsxImportSource: "@emotion/react",
       babel: {
         plugins: ["@emotion"],
+        targets:
+          "last 2 Chrome versions, last 2 Firefox versions, not Firefox < 60, not Chrome < 60",
       },
     }),
     eslintPlugin(),
@@ -35,5 +37,6 @@ export default defineConfig({
         },
       },
     }),
+    legacy(),
   ],
 });

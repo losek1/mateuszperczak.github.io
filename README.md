@@ -6,7 +6,7 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/MateuszPerczak/mateuszperczak.github.io?style=flat-round)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/MateuszPerczak/mateuszperczak.github.io?style=flat-round)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3dc8f1fb-658c-4767-b87c-70880fa906e9/deploy-status)](https://app.netlify.com/sites/mateuszperczak/deploys)
-
+[![CodeFactor](https://www.codefactor.io/repository/github/mateuszperczak/portfolio/badge)](https://www.codefactor.io/repository/github/mateuszperczak/portfolio)
 ![Website preview](./images/preview.png)
 
 ## Libraries

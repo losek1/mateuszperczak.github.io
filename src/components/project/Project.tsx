@@ -4,10 +4,16 @@ import { memo } from "react";
 
 import { projectTypeMapper } from "./Project.mappers";
 import StyledProject, { StyledProjectLink, StyledProjectType } from "./Project.styles";
-import type { ProjectProps } from "./Project.types";
+import type { ProjectPropsWithAttributes } from "./Project.types";
 import { projectVariants } from "./Project.variants";
 
-const Project = ({ image, name, type, links, ...rest }: ProjectProps): JSX.Element => {
+const Project = ({
+  image,
+  name,
+  type,
+  links,
+  ...rest
+}: ProjectPropsWithAttributes): JSX.Element => {
   return (
     <StyledProject {...rest} variants={projectVariants}>
       <div className="project-image" style={{ backgroundImage: `url(${image})` }} />
@@ -15,7 +21,7 @@ const Project = ({ image, name, type, links, ...rest }: ProjectProps): JSX.Eleme
         <div className="project-info">
           <p className="project-name">{name}</p>
           <StyledProjectType type={type}>
-            {projectTypeMapper[type] ?? "Unknown"}
+            {`${projectTypeMapper[type] ?? "Unknown"}`}
           </StyledProjectType>
         </div>
         {links && (

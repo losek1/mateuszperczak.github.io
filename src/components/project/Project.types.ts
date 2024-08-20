@@ -1,6 +1,10 @@
 import type { MotionProps } from "framer-motion";
 import type { HTMLAttributes } from "react";
 
+export type ProjectPropsWithAttributes = ProjectProps &
+  HTMLAttributes<HTMLDivElement> &
+  MotionProps;
+
 export type ProjectProps = {
   image: string;
   name: string;
@@ -9,7 +13,6 @@ export type ProjectProps = {
     demo?: string;
     repository?: string;
   };
-} & HTMLAttributes<HTMLDivElement> &
-  MotionProps;
+};
 
 export type ProjectType = "web" | "desktop";

@@ -3,8 +3,9 @@ import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
 const Home = lazy(() => import("../pages/Home/Home"));
-const Updates = lazy(() => import("../pages/Updates"));
+const Updates = lazy(() => import("../pages/Updates/Updates"));
 const Projects = lazy(() => import("../pages/Projects/Projects"));
+const AboutMe = lazy(() => import("../pages/AboutMe/AboutMe"));
 const PageNotFound = lazy(() => import("../pages/PageNotFound/PageNotFound"));
 
 // const Blog = lazy(() => {
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
       {
         path: "/projects",
         element: <Projects />,
+      },
+      {
+        path: "/aboutme",
+        element: <AboutMe />,
       },
 
       { path: "*", element: <PageNotFound /> },

@@ -2,7 +2,13 @@ import { css, Global, type Theme, useTheme } from "@emotion/react";
 import { memo } from "react";
 
 const GlobalStyle = (): JSX.Element => {
-  const { background, color, scrollbar, scrollbarActive }: Theme = useTheme();
+  const {
+    fillColorPrimary,
+    fillColorSecondary,
+    textColorPrimary,
+    scrollbarColorPrimary,
+    scrollbarColorSecondary,
+  }: Theme = useTheme();
 
   return (
     <Global
@@ -24,8 +30,14 @@ const GlobalStyle = (): JSX.Element => {
           display: flex;
           flex-direction: column;
           font-family: "Nunito";
-          background: ${background};
-          color: ${color};
+          background: ${fillColorPrimary};
+          background: ${`radial-gradient(
+            circle,
+            ${fillColorSecondary} calc(0vw - 500px),
+            ${fillColorPrimary} 0px,
+            ${fillColorSecondary} calc(100vw + 500px)
+          )`};
+          color: ${textColorPrimary};
           overflow-y: scroll;
           overflow-x: hidden;
           user-select: none;
@@ -39,14 +51,14 @@ const GlobalStyle = (): JSX.Element => {
           width: 8px;
         }
         ::-webkit-scrollbar-track {
-          background: ${background};
+          background: ${fillColorPrimary};
         }
         ::-webkit-scrollbar-thumb {
-          background: ${scrollbar};
+          background: ${scrollbarColorPrimary};
           border-radius: 5px;
         }
         ::-webkit-scrollbar-thumb:hover {
-          background: ${scrollbarActive};
+          background: ${scrollbarColorSecondary};
         }
       `}
     />

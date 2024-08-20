@@ -35,7 +35,7 @@ export const textVariants: Variants = {
     y: 0,
     transition: {
       type: "spring",
-      duration: 0.4,
+      duration: 0.6,
       bounce: 0.4,
     },
   },

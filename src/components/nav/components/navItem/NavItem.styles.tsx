@@ -12,12 +12,13 @@ const StyledNavItem = styled(NavLink)`
   font-weight: bold;
   transition: color 200ms, background-color 200ms;
   cursor: pointer;
-  color: ${({ theme: { navItem } }): string => navItem};
+  color: ${({ theme: { textColorSecondary } }): string => textColorSecondary};
   &.active {
-    color: ${({ theme: { navItemActive } }): string => navItemActive};
+    color: ${({ theme: { textColorPrimary } }): string => textColorPrimary};
   }
   &:hover {
-    background-color: ${({ theme: { border } }): string => border};
+    background-color: ${({ theme: { strokeColorPrimary } }): string =>
+      strokeColorPrimary};
   }
 `;
 

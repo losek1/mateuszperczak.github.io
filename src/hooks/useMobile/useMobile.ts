@@ -14,3 +14,35 @@ const useMobile = (): boolean => {
   return isMobile;
 };
 export default useMobile;
+
+// import { useEffect, useMemo } from "react";
+// import { fromEvent } from "rxjs";
+
+// const useWindowDimensionsListener = () => {
+//   const isMobileListener: MediaQueryList = useMemo(() => {
+//     return window.matchMedia("(max-width: 768px)");
+//   }, []);
+//   const isTableListener: MediaQueryList = useMemo(() => {
+//     return window.matchMedia("(max-width: 1024px) and (min-width: 769px)");
+//   }, []);
+//   useEffect(() => {
+//     const isMobileListenerSubscription = fromEvent(
+//       isMobileListener,
+//       "change",
+//     ).subscribe(() => {
+//       console.log(isMobileListener.matches, "jestem telefonem");
+//     });
+//     const isTabletListenerSubscription = fromEvent(
+//       isTableListener,
+//       "change",
+//     ).subscribe(() => {
+//       console.log(isTableListener.matches, "jestem tabletem");
+//     });
+//     return (): void => {
+//       isMobileListenerSubscription.unsubscribe();
+//       isTabletListenerSubscription.unsubscribe();
+//     };
+//   }, []);
+// };
+
+// export default useWindowDimensionsListener;

@@ -8,13 +8,14 @@ const StyledNavLogo = styled(NavLink)`
   transition: color 200ms;
   padding: 5px 10px;
   border-radius: 5px;
-  color: ${({ theme: { navItem } }): string => navItem};
+  color: ${({ theme: { textColorSecondary } }): string => textColorSecondary};
   transition: background-color 200ms, color 200ms;
   &.active {
-    color: ${({ theme: { navItemActive } }): string => navItemActive};
+    color: ${({ theme: { textColorPrimary } }): string => textColorPrimary};
   }
   &:hover {
-    background-color: ${({ theme: { border } }): string => border};
+    background-color: ${({ theme: { strokeColorPrimary } }): string =>
+      strokeColorPrimary};
   }
 `;
 

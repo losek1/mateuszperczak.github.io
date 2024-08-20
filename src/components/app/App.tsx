@@ -8,7 +8,7 @@ import { ScrollRestoration } from "react-router-dom";
 const App = (): JSX.Element => {
   return (
     <>
-      <ScrollRestoration getKey={(location): string => location.pathname} />
+      <ScrollRestoration />
       <Nav />
       <Suspense fallback={<Loader />}>
         <AnimatedOutlet />

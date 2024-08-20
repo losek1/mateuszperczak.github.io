@@ -10,9 +10,10 @@ const StyledNavMenu = styled(m.menu)`
   z-index: 1;
   overflow: hidden;
   padding: 10px;
-  background-color: ${({ theme: { nav } }): string => nav};
-  box-shadow: 0 0 5px 5px ${({ theme: { shadow } }): string => shadow};
-  border: 2px solid ${({ theme: { border } }): string => border};
+  background-color: ${({ theme: { fillColorPrimary } }): string => fillColorPrimary};
+  box-shadow: 0 0 5px 5px
+    ${({ theme: { shadowColorPrimary } }): string => shadowColorPrimary};
+  border: 2px solid ${({ theme: { strokeColorPrimary } }): string => strokeColorPrimary};
 `;
 
 export default StyledNavMenu;
