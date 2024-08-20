@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
-    "@emotion/babel-plugin": "^11.10.5",
+    "@emotion/babel-plugin": "^11.12.0",
     "@nabla/vite-plugin-eslint": "^1.4.2",
     "@types/node": "^18.11.17",
     "@types/react": "^18.0.26",
