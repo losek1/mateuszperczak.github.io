@@ -47,4 +47,4 @@ export const NotFoundMessage = memo((): JSX.Element => {
   );
 });
 
-NotFoundMessage.displayName = "Not Found Message";
+NotFoundMessage.displayName = "NotFoundMessage";

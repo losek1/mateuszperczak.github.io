@@ -5,7 +5,7 @@ import { resolve } from "path";
 import { defineConfig } from "vite";
 import svgr from "vite-plugin-svgr";
 // https://vitejs.dev/config/
-defineConfig({
+export default defineConfig({
   base: "",
   resolve: {
     alias: {

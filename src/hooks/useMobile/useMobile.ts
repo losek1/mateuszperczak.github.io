@@ -8,7 +8,7 @@ export const useMobile = (): boolean => {
     const subscription = fromEvent(window, "resize")
       .pipe(debounceTime(200))
       .subscribe(() => setIsMobile(window.innerWidth < 768));
-    return () => subscription.unsubscribe();
+    return (): void => subscription.unsubscribe();
   }, []);
 
   return isMobile;

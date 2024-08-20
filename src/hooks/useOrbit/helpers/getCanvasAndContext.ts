@@ -1,8 +1,8 @@
 import type { RefObject } from "react";
 
 type GetCanvasAndContextReturn = {
-  canvas: HTMLCanvasElement | null;
-  context: CanvasRenderingContext2D | null;
+  canvas: HTMLCanvasElement;
+  context: CanvasRenderingContext2D;
 } | null;
 
 export const getCanvasAndContext = (
