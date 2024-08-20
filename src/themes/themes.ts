@@ -7,7 +7,7 @@ export enum ColorThemes {
 
 type Themes = Record<ColorThemes, Theme>;
 
-const themes: Themes = {
+export const themes: Themes = {
   light: {
     // refactor
     // text
@@ -87,5 +87,3 @@ const themes: Themes = {
     // innerCard: "#232323",
   },
 };
-
-export default themes;

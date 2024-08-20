@@ -32,4 +32,4 @@ const StyledLoader = styled.div`
   }
 `;
 
-export default StyledLoader;
+StyledLoader;

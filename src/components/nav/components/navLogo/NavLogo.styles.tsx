@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
 
-const StyledNavLogo = styled(NavLink)`
+export const StyledNavLogo = styled(NavLink)`
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
@@ -18,5 +18,3 @@ const StyledNavLogo = styled(NavLink)`
       strokeColorPrimary};
   }
 `;
-
-export default StyledNavLogo;

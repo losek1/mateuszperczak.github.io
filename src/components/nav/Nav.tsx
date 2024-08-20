@@ -1,12 +1,12 @@
-import useMobile from "@hooks/useMobile";
+import { useMobile } from "@hooks/index";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 import { NavHamburger, NavItem, NavLogo, NavMenu } from "./components";
 import { navItems } from "./Nav.items";
-import StyledNav from "./Nav.styles";
+import { StyledNav } from "./Nav.styles";
 
-const Nav = (): JSX.Element => {
+export const Nav = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const isMobile = useMobile();
 
@@ -55,5 +55,3 @@ const Nav = (): JSX.Element => {
     </>
   );
 };
-
-export default Nav;

@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 
 import { OutletWrapper, StaticOutlet } from "./components";
 
-const AnimatedOutlet = (): JSX.Element => {
+export const AnimatedOutlet = (): JSX.Element => {
   const location = useLocation();
   return (
     <AnimatePresence mode="wait">
@@ -13,5 +13,3 @@ const AnimatedOutlet = (): JSX.Element => {
     </AnimatePresence>
   );
 };
-
-export default AnimatedOutlet;

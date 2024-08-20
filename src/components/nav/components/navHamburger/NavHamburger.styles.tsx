@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { m } from "framer-motion";
 
-const StyledNavHamburger = styled(m.button)`
+export const StyledNavHamburger = styled(m.button)`
   all: unset;
   display: grid;
   place-items: center;
@@ -23,5 +23,3 @@ const StyledNavHamburger = styled(m.button)`
     outline: 1px solid ${({ theme: { textColorPrimary } }): string => textColorPrimary};
   }
 `;
-
-export default StyledNavHamburger;

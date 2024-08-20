@@ -1,7 +1,7 @@
-import StyledNavItem from "./NavItem.styles";
+import { StyledNavItem } from "./NavItem.styles";
 import type { NavItemProps } from "./NavItem.types";
 
-const NavItem = ({ icon: Icon, name, to, ...rest }: NavItemProps): JSX.Element => {
+export const NavItem = ({ icon: Icon, name, to, ...rest }: NavItemProps): JSX.Element => {
   return (
     <StyledNavItem to={to} {...rest}>
       <Icon />
@@ -9,5 +9,3 @@ const NavItem = ({ icon: Icon, name, to, ...rest }: NavItemProps): JSX.Element =
     </StyledNavItem>
   );
 };
-
-export default NavItem;

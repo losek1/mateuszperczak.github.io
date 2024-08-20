@@ -1,9 +1,9 @@
 import { memo } from "react";
 
-import StyledNavLogo from "./NavLogo.styles";
+import { StyledNavLogo } from "./NavLogo.styles";
 
-const NavLogo = (): JSX.Element => {
+export const NavLogo = memo((): JSX.Element => {
   return <StyledNavLogo to="/">MP</StyledNavLogo>;
-};
+});
 
-export default memo(NavLogo);
+NavLogo.displayName = "NavLogo";

@@ -1,11 +1,10 @@
-import Page from "@components/page/Page";
-import Project from "@components/project/Project";
+import { Page, Project } from "@components/index";
 
 import { projects } from "./Projects.data";
-import StyledProjectsAnimationProvider from "./Projects.styles";
+import { StyledProjectsAnimationProvider } from "./Projects.styles";
 import { providerVariants } from "./Projects.variants";
 
-const Projects = (): JSX.Element => {
+export const Projects = (): JSX.Element => {
   return (
     <Page>
       <StyledProjectsAnimationProvider
@@ -21,5 +20,3 @@ const Projects = (): JSX.Element => {
     </Page>
   );
 };
-
-export default Projects;

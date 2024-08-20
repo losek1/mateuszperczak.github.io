@@ -1,17 +1,21 @@
+import { useOrbit } from "@hooks/index";
+import { m } from "framer-motion";
 import { memo } from "react";
 
-import StyledAnimatedUserCard from "./AnimatedUserCard.styles";
-import { userAvatarVariants, userCardVariants } from "./AnimatedUserCard.variants";
-import useOrbit from "@hooks/useOrbit/useOrbit";
-import { m } from "framer-motion";
+import { StyledAnimatedUserCard } from "./AnimatedUserCard.styles";
+import {
+  userAvatarVariants,
+  userCanvasVariants,
+  userCardVariants,
+} from "./AnimatedUserCard.variants";
 
-const AnimatedUserCard = (): JSX.Element => {
-  const [ref] = useOrbit();
+export const AnimatedUserCard = memo((): JSX.Element => {
+  const [ref] = useOrbit({ orbits: [] });
 
   return (
     <StyledAnimatedUserCard variants={userCardVariants}>
       <m.div className="user-avatar" variants={userAvatarVariants}>
-        <canvas width={400} height={400} ref={ref} />
+        <m.canvas width={400} height={400} ref={ref} variants={userCanvasVariants} />
       </m.div>
       <m.div className="user-label" variants={userAvatarVariants}>
         <span>Hi 👋, I&apos;m Mateusz.</span>
@@ -22,6 +26,6 @@ const AnimatedUserCard = (): JSX.Element => {
       </m.div>
     </StyledAnimatedUserCard>
   );
-};
+});
 
-export default memo(AnimatedUserCard);
+AnimatedUserCard.displayName = "Animated User Card";

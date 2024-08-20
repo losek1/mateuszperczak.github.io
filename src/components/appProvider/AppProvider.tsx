@@ -1,11 +1,11 @@
-import GlobalStyle from "@components/globalStyle/GlobalStyle";
+import { GlobalStyle } from "@components/globalStyle/GlobalStyle";
 import { ThemeProvider } from "@emotion/react";
-import useTheme from "@hooks/useTheme";
+import { useTheme } from "@hooks/index";
 import { router } from "@routes/routes";
 import { domAnimation, LazyMotion } from "framer-motion";
 import { RouterProvider } from "react-router-dom";
 
-const AppProvider = (): JSX.Element => {
+export const AppProvider = (): JSX.Element => {
   const theme = useTheme();
   return (
     <ThemeProvider theme={theme}>
@@ -16,4 +16,3 @@ const AppProvider = (): JSX.Element => {
     </ThemeProvider>
   );
 };
-export default AppProvider;

@@ -1,9 +1,9 @@
 import { forwardRef } from "react";
 
-import StyledNavMenu from "./NavMenu.styles";
+import { StyledNavMenu } from "./NavMenu.styles";
 import type { NavMenuProps } from "./NavMenu.types";
 
-const NavMenu = forwardRef<HTMLMenuElement, NavMenuProps>(
+export const NavMenu = forwardRef<HTMLMenuElement, NavMenuProps>(
   ({ isMenuOpen, children, ...rest }, ref): JSX.Element => {
     return (
       <StyledNavMenu
@@ -24,5 +24,3 @@ const NavMenu = forwardRef<HTMLMenuElement, NavMenuProps>(
 );
 
 NavMenu.displayName = "NavMenu";
-
-export default NavMenu;

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
 
-const StyledNavItem = styled(NavLink)`
+export const StyledNavItem = styled(NavLink)`
   display: flex;
   align-items: center;
   gap: 10px;
@@ -21,5 +21,3 @@ const StyledNavItem = styled(NavLink)`
       strokeColorPrimary};
   }
 `;
-
-export default StyledNavItem;

@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { useOutlet } from "react-router-dom";
 
-const StaticOutlet = (): JSX.Element => {
+export const StaticOutlet = (): JSX.Element => {
   const outlet = useOutlet();
 
   const memoizedOutlet = useMemo(() => {
@@ -10,5 +10,3 @@ const StaticOutlet = (): JSX.Element => {
 
   return <>{memoizedOutlet}</>;
 };
-
-export default StaticOutlet;

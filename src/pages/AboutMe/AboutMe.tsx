@@ -1,8 +1,8 @@
-import Page from "@components/page/Page";
+import { Page } from "@components/index";
 import { memo } from "react";
 
-const AboutMe = (): JSX.Element => {
+export const AboutMe = memo((): JSX.Element => {
   return <Page></Page>;
-};
+});
 
-export default memo(AboutMe);
+AboutMe.displayName = "AboutMe";

@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const StyledFooter = styled.footer`
+export const StyledFooter = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,5 +43,3 @@ const StyledFooter = styled.footer`
     font-size: 0.8rem;
   }
 `;
-
-export default StyledFooter;

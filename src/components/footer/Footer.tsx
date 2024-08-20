@@ -1,9 +1,9 @@
 import { memo, useMemo } from "react";
 import { Fragment } from "react";
 
-import StyledFooter from "./Footer.styles";
+import { StyledFooter } from "./Footer.styles";
 
-const Footer = (): JSX.Element => {
+export const Footer = memo((): JSX.Element => {
   const year = useMemo(() => new Date().getFullYear(), []);
 
   const footerText = ["v7.0.0", "GPL-3.0", year, "© Mateusz Perczak"];
@@ -30,6 +30,6 @@ const Footer = (): JSX.Element => {
       </p>
     </StyledFooter>
   );
-};
+});
 
-export default memo(Footer);
+Footer.displayName = "Footer";

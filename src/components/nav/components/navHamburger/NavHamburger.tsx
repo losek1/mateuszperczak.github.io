@@ -4,10 +4,10 @@ import { m } from "framer-motion";
 import { forwardRef } from "react";
 
 import { animation } from "./NavHamburger.animations";
-import StyledNavHamburger from "./NavHamburger.styles";
+import { StyledNavHamburger } from "./NavHamburger.styles";
 import type { NavHamburgerProps } from "./NavHamburger.types";
 
-const NavHamburger = forwardRef<HTMLButtonElement, NavHamburgerProps>(
+export const NavHamburger = forwardRef<HTMLButtonElement, NavHamburgerProps>(
   ({ isMenuOpen, ...rest }, ref): JSX.Element => {
     return (
       <StyledNavHamburger {...rest} whileTap="tap" type="button" ref={ref}>
@@ -20,5 +20,3 @@ const NavHamburger = forwardRef<HTMLButtonElement, NavHamburgerProps>(
 );
 
 NavHamburger.displayName = "NavHamburger";
-
-export default NavHamburger;

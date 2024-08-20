@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { debounceTime, fromEvent } from "rxjs";
 
-const useMobile = (): boolean => {
+export const useMobile = (): boolean => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -13,8 +13,6 @@ const useMobile = (): boolean => {
 
   return isMobile;
 };
-export default useMobile;
-
 // import { useEffect, useMemo } from "react";
 // import { fromEvent } from "rxjs";
 
@@ -45,4 +43,4 @@ export default useMobile;
 //   }, []);
 // };
 
-// export default useWindowDimensionsListener;
+//  useWindowDimensionsListener;

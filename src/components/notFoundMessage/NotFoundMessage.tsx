@@ -2,11 +2,12 @@ import Exclamation from "@icons/exclamation.svg?react";
 import { memo } from "react";
 import { useNavigate } from "react-router-dom";
 
-import StyledNotFoundMessage, {
+import {
   StyledButton,
   StyledDescription,
   StyledExclamation,
   StyledLabel,
+  StyledNotFoundMessage,
 } from "./NotFoundMessage.styles";
 import {
   exclamationVariants,
@@ -14,7 +15,7 @@ import {
   textVariants,
 } from "./NotFoundMessage.variants";
 
-const NotFoundMessage = (): JSX.Element => {
+export const NotFoundMessage = memo((): JSX.Element => {
   const navigate = useNavigate();
 
   const goHome = (): void => navigate("/", { replace: true });
@@ -44,6 +45,6 @@ const NotFoundMessage = (): JSX.Element => {
       </div>
     </StyledNotFoundMessage>
   );
-};
+});
 
-export default memo(NotFoundMessage);
+NotFoundMessage.displayName = "Not Found Message";

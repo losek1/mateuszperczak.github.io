@@ -3,7 +3,7 @@ import { m } from "framer-motion";
 
 import type { ProjectProps, ProjectType } from "./Project.types";
 
-const StyledProject = styled(m.div)`
+export const StyledProject = styled(m.div)`
   display: flex;
   flex-direction: column;
   flex: 1 1 350px;
@@ -95,5 +95,3 @@ export const StyledProjectType = styled.span<Pick<ProjectProps, "type">>`
       } as Record<ProjectType, string>
     )[type] ?? textColorSecondary)};
 `;
-
-export default StyledProject;

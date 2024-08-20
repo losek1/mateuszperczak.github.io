@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const StyledNav = styled.nav`
+export const StyledNav = styled.nav`
   position: sticky;
   left: 0;
   right: 0;
@@ -41,5 +41,3 @@ const StyledNav = styled.nav`
     gap: 10px;
   }
 `;
-
-export default StyledNav;

@@ -1,11 +1,8 @@
-import AnimatedOutlet from "@components/animatedOutlet/AnimatedOutlet";
-import Footer from "@components/footer/Footer";
-import Loader from "@components/loader/Loader";
-import Nav from "@components/nav/Nav";
+import { AnimatedOutlet, Footer, Loader, Nav } from "@components/index";
 import { Suspense } from "react";
 import { ScrollRestoration } from "react-router-dom";
 
-const App = (): JSX.Element => {
+export const App = (): JSX.Element => {
   return (
     <>
       <ScrollRestoration />
@@ -17,5 +14,3 @@ const App = (): JSX.Element => {
     </>
   );
 };
-
-export default App;

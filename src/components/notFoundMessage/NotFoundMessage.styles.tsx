@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { m } from "framer-motion";
 
-const StyledNotFoundMessage = styled(m.div)`
+export const StyledNotFoundMessage = styled(m.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,5 +48,3 @@ export const StyledButton = styled(m.button)`
     outline: 1px solid ${({ theme: { textColorPrimary } }): string => textColorPrimary};
   }
 `;
-
-export default StyledNotFoundMessage;

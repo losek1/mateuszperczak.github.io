@@ -1,7 +1,7 @@
-import Page from "@components/page/Page";
+import { Page } from "@components/index";
 // import Link from "@icons/link.svg?react";
 
-const Updates = (): JSX.Element => {
+export const Updates = (): JSX.Element => {
   return (
     <Page>
       {/* <PageCard flexDirection="column">
@@ -36,5 +36,3 @@ const Updates = (): JSX.Element => {
     </Page>
   );
 };
-
-export default Updates;

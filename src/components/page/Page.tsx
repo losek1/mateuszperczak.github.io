@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const Page = styled.article`
+export const Page = styled.article`
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -12,4 +12,3 @@ const Page = styled.article`
     ${({ theme: { strokeColorPrimary } }): string => strokeColorPrimary};
   padding-bottom: 64px;
 `;
-export default Page;

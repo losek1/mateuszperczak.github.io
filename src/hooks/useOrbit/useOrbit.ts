@@ -1,11 +1,37 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+
+import { getCanvasAndContext } from "./helpers";
 
 type Orbit = {
   radius: number;
+  startingAngle: number;
+  rotationSpeed: number;
+  icon: string;
 };
 
-const useOrbit = () => {
+type UseOrbitProps = {
+  orbits: Orbit[];
+};
+
+type UseOrbitState = {
+  orbits: Orbit[];
+};
+
+export const useOrbit = ({ orbits }: UseOrbitProps) => {
+  const [state, setState] = useState<UseOrbitState>({
+    orbits,
+  });
+  // canvas ref
   const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  const _render = useCallback((): void => {
+    const canvasAndContext = getCanvasAndContext(canvasRef);
+    if (canvasAndContext === null) {
+      return;
+    }
+
+    const { canvas, context } = canvasAndContext;
+  }, []);
 
   const renderOrbit = (context: CanvasRenderingContext2D, { radius }: Orbit): void => {
     context.strokeStyle = "#aaaaaa";
@@ -18,6 +44,7 @@ const useOrbit = () => {
       Math.PI * 2,
     );
     context.closePath();
+
     context.setLineDash([4]);
     context.stroke();
     context.setLineDash([0]);
@@ -25,6 +52,9 @@ const useOrbit = () => {
 
   useEffect(() => {
     if (canvasRef.current === null) return;
+
+    if (!(canvasRef.current instanceof HTMLCanvasElement))
+      throw new Error("ref is not a HTMLCanvasElement");
 
     const canvas = canvasRef.current;
 
@@ -61,15 +91,16 @@ const useOrbit = () => {
       context.fill();
       context.closePath();
       context.stroke();
-      angle += 0.5; // rotation speed in degrees per frame
-
+      angle += 0.3; // rotation speed in degrees per frame
+      if (angle >= 360) {
+        angle = 0;
+      }
+      context.clearRect(0, 300, context.canvas.width, context.canvas.height);
       window.requestAnimationFrame(update);
     };
 
     update();
   }, []);
 
-  return [canvasRef] as const;
+  return [canvasRef, {}] as const;
 };
-
-export default useOrbit;

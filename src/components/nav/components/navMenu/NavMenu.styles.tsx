@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { m } from "framer-motion";
 
-const StyledNavMenu = styled(m.menu)`
+export const StyledNavMenu = styled(m.menu)`
   position: fixed;
   top: 74px;
   display: flex;
@@ -15,5 +15,3 @@ const StyledNavMenu = styled(m.menu)`
     ${({ theme: { shadowColorPrimary } }): string => shadowColorPrimary};
   border: 2px solid ${({ theme: { strokeColorPrimary } }): string => strokeColorPrimary};
 `;
-
-export default StyledNavMenu;

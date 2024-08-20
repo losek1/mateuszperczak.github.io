@@ -1,11 +1,11 @@
 import type { Theme } from "@emotion/react";
 import { useEffect, useState } from "react";
 
-import themes, { ColorThemes } from "../../themes/themes";
+import { ColorThemes, themes } from "../../themes/themes";
 
 type UpdateThemeProps = MediaQueryListEvent | MediaQueryList;
 
-const useTheme = (): Theme => {
+export const useTheme = (): Theme => {
   const [theme, setTheme] = useState<ColorThemes>(ColorThemes.Dark);
 
   const updateTheme = ({ matches }: UpdateThemeProps): void => {
@@ -23,5 +23,3 @@ const useTheme = (): Theme => {
 
   return themes[theme];
 };
-
-export default useTheme;

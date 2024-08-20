@@ -1,0 +1,1 @@
+export { getCanvasAndContext } from "./getCanvasAndContext";

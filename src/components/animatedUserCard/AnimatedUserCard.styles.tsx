@@ -1,9 +1,7 @@
 import styled from "@emotion/styled";
 import { m } from "framer-motion";
 
-import userIcon from "@icons/user.svg";
-
-const StyledAnimatedUserCard = styled(m.div)`
+export const StyledAnimatedUserCard = styled(m.div)`
   display: flex;
   flex-direction: row-reverse;
   width: 80%;
@@ -26,9 +24,6 @@ const StyledAnimatedUserCard = styled(m.div)`
     @media screen and (max-width: 768px) {
       text-align: center;
     }
-    z-index: 2;
-    /* background-color: ${({ theme: { fillColorPrimary } }): string =>
-      fillColorPrimary}; */
   }
   .user-label-description {
     font-size: clamp(0.5rem, 3vw, 1.2rem);
@@ -56,8 +51,5 @@ const StyledAnimatedUserCard = styled(m.div)`
     left: -50%;
     width: 200%;
     height: 200%;
-    z-index: 1;
   }
 `;
-
-export default StyledAnimatedUserCard;
