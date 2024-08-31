@@ -45,11 +45,4 @@ export const StyledAnimatedUserCard = styled(m.div)`
     box-shadow: 0 0 25px 5px
       ${({ theme: { strokeColorPrimary } }): string => strokeColorPrimary};
   }
-  .user-avatar > canvas {
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-  }
 `;
