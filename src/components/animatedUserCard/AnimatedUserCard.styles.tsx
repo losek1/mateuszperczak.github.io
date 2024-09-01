@@ -38,7 +38,7 @@ export const StyledAnimatedUserCard = styled(m.div)`
     position: relative;
     flex: 0 1 clamp(150px, 40vw, 250px);
     aspect-ratio: 1;
-    background-image: url("https://scontent-waw2-2.xx.fbcdn.net/v/t39.30808-6/424982717_3605297713056277_8359511818600006794_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=KvFVJqXHk8IQ7kNvgGuIkS6&_nc_ht=scontent-waw2-2.xx&oh=00_AYAxhu2H6AO7ku8Ufrjk7wqmRO9sS0BNvyP8t76yWEJQdQ&oe=66C2DBBC");
+    background-image: url("./images/avatar.webp");
     background-size: cover;
     border-radius: 50%;
     border: 2px solid ${({ theme: { textColorPrimary } }): string => textColorPrimary};
