@@ -62,6 +62,7 @@ export const themes: Themes = {
     yellowColorPrimary: "#f8c54e",
     greenColorPrimary: "#00ffcc",
     blueColorPrimary: "#00ccff",
+    redColorPrimary: "#ff00cc",
 
     // old
     // scrollbar: "#262626",

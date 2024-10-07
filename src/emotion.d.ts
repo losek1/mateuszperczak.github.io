@@ -23,6 +23,7 @@ declare module "@emotion/react" {
     yellowColorPrimary: Hex;
     greenColorPrimary: Hex;
     blueColorPrimary: Hex;
+    redColorPrimary: Hex;
     // scrollbar: Hex;
     // scrollbarActive: Hex;
     // nav: Hex;

@@ -10,6 +10,7 @@ export const StyledNavItem = styled(NavLink)`
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
+  font-size: 1rem;
   transition: color 200ms, background-color 200ms;
   cursor: pointer;
   color: ${({ theme: { textColorSecondary } }): string => textColorSecondary};

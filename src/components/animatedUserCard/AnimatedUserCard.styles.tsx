@@ -20,11 +20,12 @@ export const StyledAnimatedUserCard = styled(m.div)`
     flex: 1;
     font-size: clamp(0.5rem, 5vw, 2rem);
     font-weight: bold;
-    padding: 10px;
+    padding: 20px;
     @media screen and (max-width: 768px) {
       text-align: center;
     }
   }
+
   .user-label-description {
     font-size: clamp(0.5rem, 3vw, 1.2rem);
     color: ${({ theme: { textColorSecondary } }): string => textColorSecondary};
