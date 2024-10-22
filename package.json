@@ -23,7 +23,7 @@
     "rxjs": "^7.8.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.5",
+    "@babel/core": "^7.25.9",
     "@emotion/babel-plugin": "^11.10.5",
     "@nabla/vite-plugin-eslint": "^1.4.2",
     "@types/node": "^18.11.17",
